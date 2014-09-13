@@ -1,0 +1,90 @@
+==15931== Memcheck, a memory error detector
+==15931== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==15931== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==15931== Command: ./proj4 input.txt output.npck
+==15931== Parent PID: 14583
+==15931== 
+--15931-- 
+--15931-- Valgrind options:
+--15931--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
+--15931--    --tool=memcheck
+--15931--    --leak-check=full
+--15931--    --show-reachable=yes
+--15931--    --verbose
+--15931--    --log-file=valgrind.log
+--15931-- Contents of /proc/version:
+--15931--   Linux version 3.11.0-19-generic (buildd@comet) (gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) ) #33-Ubuntu SMP Tue Mar 11 18:48:34 UTC 2014
+--15931-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--15931-- Page sizes: currently 4096, max supported 4096
+--15931-- Valgrind library directory: /usr/lib/valgrind
+--15931-- Reading syms from /home/andy/Desktop/ECE368/proj4/proj4
+--15931-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
+--15931--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
+--15931--   .. CRC mismatch (computed 51e60a7a wanted 521e3c74)
+--15931--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--15931--   .. CRC is valid
+--15931--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--15931--   .. CRC is valid
+--15931-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--15931--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--15931--   .. CRC mismatch (computed c436d3d9 wanted 99aa3883)
+--15931--    object doesn't have a symbol table
+--15931--    object doesn't have a dynamic symbol table
+--15931-- Scheduler: using generic scheduler lock implementation.
+--15931-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
+--15931-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==15931== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-15931-by-andy-on-???
+==15931== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-15931-by-andy-on-???
+==15931== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-15931-by-andy-on-???
+==15931== 
+==15931== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==15931== don't want to do, unless you know exactly what you're doing,
+==15931== or are doing some strange experiment):
+==15931==   /usr/lib/valgrind/../../bin/vgdb --pid=15931 ...command...
+==15931== 
+==15931== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==15931==   /path/to/gdb ./proj4
+==15931== and then give GDB the following command
+==15931==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=15931
+==15931== --pid is optional if only one valgrind process is running
+==15931== 
+--15931-- REDIR: 0x4018f40 (strlen) redirected to 0x3806e491 (???)
+--15931-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--15931--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--15931--   .. CRC mismatch (computed 826470ab wanted a8b7e9f3)
+--15931--    object doesn't have a symbol table
+--15931-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--15931--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--15931--   .. CRC mismatch (computed d4fd7975 wanted b90a895a)
+--15931--    object doesn't have a symbol table
+--15931-- REDIR: 0x4018db0 (index) redirected to 0x4c2d480 (index)
+--15931-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e560 (strcmp)
+--15931-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
+--15931--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
+--15931--   .. CRC mismatch (computed 2c8ee98b wanted da4a7364)
+--15931--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--15931--   .. CRC is valid
+--15931--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--15931--   .. CRC is valid
+--15931-- REDIR: 0x4ec1980 (strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--15931-- REDIR: 0x4ebdd10 (strnlen) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--15931-- REDIR: 0x4ec3c50 (strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--15931-- REDIR: 0x4ec0790 (memset) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--15931-- REDIR: 0x4ec0740 (memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--15931-- REDIR: 0x4ebf700 (__GI_strrchr) redirected to 0x4c2d2a0 (__GI_strrchr)
+--15931-- REDIR: 0x4eb7470 (malloc) redirected to 0x4c2a270 (malloc)
+--15931-- REDIR: 0x4ebdc30 (__GI_strlen) redirected to 0x4c2d830 (__GI_strlen)
+--15931-- REDIR: 0x4eb7900 (free) redirected to 0x4c2b5a0 (free)
+--15931-- REDIR: 0x4ec7b20 (strchrnul) redirected to 0x4c300f0 (strchrnul)
+==15931== 
+==15931== HEAP SUMMARY:
+==15931==     in use at exit: 0 bytes in 0 blocks
+==15931==   total heap usage: 63 allocs, 63 frees, 11,832 bytes allocated
+==15931== 
+==15931== All heap blocks were freed -- no leaks are possible
+==15931== 
+==15931== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--15931-- 
+--15931-- used_suppression:      2 dl-hack3-cond-1
+==15931== 
+==15931== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)

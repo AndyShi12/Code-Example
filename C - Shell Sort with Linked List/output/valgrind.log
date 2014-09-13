@@ -1,0 +1,99 @@
+==6021== Memcheck, a memory error detector
+==6021== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==6021== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==6021== Command: ./proj2 input.txt output.txt
+==6021== Parent PID: 2287
+==6021== 
+--6021-- 
+--6021-- Valgrind options:
+--6021--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
+--6021--    --tool=memcheck
+--6021--    --leak-check=full
+--6021--    --verbose
+--6021--    --log-file=valgrind.log
+--6021-- Contents of /proc/version:
+--6021--   Linux version 3.11.0-17-generic (buildd@toyol) (gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) ) #31-Ubuntu SMP Mon Feb 3 21:52:43 UTC 2014
+--6021-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--6021-- Page sizes: currently 4096, max supported 4096
+--6021-- Valgrind library directory: /usr/lib/valgrind
+--6021-- Reading syms from /home/andy/Desktop/ECE368/proj2/proj2
+--6021-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
+--6021--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
+--6021--   .. CRC mismatch (computed 51e60a7a wanted 521e3c74)
+--6021--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--6021--   .. CRC is valid
+--6021--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--6021--   .. CRC is valid
+--6021-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--6021--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--6021--   .. CRC mismatch (computed c436d3d9 wanted 99aa3883)
+--6021--    object doesn't have a symbol table
+--6021--    object doesn't have a dynamic symbol table
+--6021-- Scheduler: using generic scheduler lock implementation.
+--6021-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
+--6021-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==6021== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-6021-by-andy-on-???
+==6021== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-6021-by-andy-on-???
+==6021== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-6021-by-andy-on-???
+==6021== 
+==6021== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==6021== don't want to do, unless you know exactly what you're doing,
+==6021== or are doing some strange experiment):
+==6021==   /usr/lib/valgrind/../../bin/vgdb --pid=6021 ...command...
+==6021== 
+==6021== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==6021==   /path/to/gdb ./proj2
+==6021== and then give GDB the following command
+==6021==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=6021
+==6021== --pid is optional if only one valgrind process is running
+==6021== 
+--6021-- REDIR: 0x4018f40 (strlen) redirected to 0x3806e491 (???)
+--6021-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--6021--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--6021--   .. CRC mismatch (computed 826470ab wanted a8b7e9f3)
+--6021--    object doesn't have a symbol table
+--6021-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--6021--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--6021--   .. CRC mismatch (computed d4fd7975 wanted b90a895a)
+--6021--    object doesn't have a symbol table
+--6021-- REDIR: 0x4018db0 (index) redirected to 0x4c2d480 (index)
+--6021-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e560 (strcmp)
+--6021-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
+--6021--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
+--6021--   .. CRC mismatch (computed 2c8ee98b wanted da4a7364)
+--6021--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--6021--   .. CRC is valid
+--6021--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--6021--   .. CRC is valid
+--6021-- REDIR: 0x4ec1980 (strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--6021-- REDIR: 0x4ebdd10 (strnlen) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--6021-- REDIR: 0x4ec3c50 (strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--6021-- REDIR: 0x4ec0790 (memset) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--6021-- REDIR: 0x4ec0740 (memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--6021-- REDIR: 0x4ebf700 (__GI_strrchr) redirected to 0x4c2d2a0 (__GI_strrchr)
+--6021-- REDIR: 0x4eb7470 (malloc) redirected to 0x4c2a270 (malloc)
+--6021-- REDIR: 0x4ec7b20 (strchrnul) redirected to 0x4c300f0 (strchrnul)
+--6021-- REDIR: 0x4eb7900 (free) redirected to 0x4c2b5a0 (free)
+--6021-- REDIR: 0x4ebdc30 (__GI_strlen) redirected to 0x4c2d830 (__GI_strlen)
+==6021== 
+==6021== HEAP SUMMARY:
+==6021==     in use at exit: 1,136 bytes in 2 blocks
+==6021==   total heap usage: 50,008 allocs, 50,006 frees, 801,784 bytes allocated
+==6021== 
+==6021== Searching for pointers to 2 not-freed blocks
+==6021== Checked 83,048 bytes
+==6021== 
+==6021== LEAK SUMMARY:
+==6021==    definitely lost: 0 bytes in 0 blocks
+==6021==    indirectly lost: 0 bytes in 0 blocks
+==6021==      possibly lost: 0 bytes in 0 blocks
+==6021==    still reachable: 1,136 bytes in 2 blocks
+==6021==         suppressed: 0 bytes in 0 blocks
+==6021== Reachable blocks (those to which a pointer was found) are not shown.
+==6021== To see them, rerun with: --leak-check=full --show-reachable=yes
+==6021== 
+==6021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--6021-- 
+--6021-- used_suppression:      2 dl-hack3-cond-1
+==6021== 
+==6021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)

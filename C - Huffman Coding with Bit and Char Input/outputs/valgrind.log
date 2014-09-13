@@ -1,0 +1,119 @@
+==4316== Memcheck, a memory error detector
+==4316== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==4316== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==4316== Command: ./pa09 inputs/bit_header_inputs/description_bit outputs/output_bit01
+==4316== Parent PID: 3156
+==4316== 
+--4316-- 
+--4316-- Valgrind options:
+--4316--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
+--4316--    --tool=memcheck
+--4316--    --leak-check=full
+--4316--    --verbose
+--4316--    --log-file=outputs/valgrind.log
+--4316-- Contents of /proc/version:
+--4316--   Linux version 3.8.0-31-generic (buildd@panlong) (gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-1ubuntu1) ) #46-Ubuntu SMP Tue Sep 10 20:03:44 UTC 2013
+--4316-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--4316-- Page sizes: currently 4096, max supported 4096
+--4316-- Valgrind library directory: /usr/lib/valgrind
+--4316-- Reading syms from /home/andy/Desktop/ECE264/solutions/hw/PA09/pa09
+--4316-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
+--4316--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
+--4316--   .. CRC mismatch (computed 51e60a7a wanted 521e3c74)
+--4316--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--4316--   .. CRC is valid
+--4316--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--4316--   .. CRC is valid
+--4316-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--4316--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--4316--   .. CRC mismatch (computed c436d3d9 wanted 99aa3883)
+--4316--    object doesn't have a symbol table
+--4316--    object doesn't have a dynamic symbol table
+--4316-- Scheduler: using generic scheduler lock implementation.
+--4316-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
+--4316-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==4316== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-4316-by-andy-on-???
+==4316== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-4316-by-andy-on-???
+==4316== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-4316-by-andy-on-???
+==4316== 
+==4316== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==4316== don't want to do, unless you know exactly what you're doing,
+==4316== or are doing some strange experiment):
+==4316==   /usr/lib/valgrind/../../bin/vgdb --pid=4316 ...command...
+==4316== 
+==4316== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==4316==   /path/to/gdb ./pa09
+==4316== and then give GDB the following command
+==4316==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=4316
+==4316== --pid is optional if only one valgrind process is running
+==4316== 
+--4316-- REDIR: 0x4018f40 (strlen) redirected to 0x3806e491 (???)
+--4316-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--4316--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--4316--   .. CRC mismatch (computed 826470ab wanted a8b7e9f3)
+--4316--    object doesn't have a symbol table
+--4316-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--4316--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--4316--   .. CRC mismatch (computed d4fd7975 wanted b90a895a)
+--4316--    object doesn't have a symbol table
+--4316-- REDIR: 0x4018db0 (index) redirected to 0x4c2d480 (index)
+--4316-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e560 (strcmp)
+--4316-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
+--4316--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
+--4316--   .. CRC mismatch (computed 2c8ee98b wanted da4a7364)
+--4316--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--4316--   .. CRC is valid
+--4316--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--4316--   .. CRC is valid
+--4316-- REDIR: 0x4ec1980 (strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4316-- REDIR: 0x4ebdd10 (strnlen) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4316-- REDIR: 0x4ec3c50 (strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4316-- REDIR: 0x4ec0790 (memset) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4316-- REDIR: 0x4ec0740 (memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4316-- REDIR: 0x4ebf700 (__GI_strrchr) redirected to 0x4c2d2a0 (__GI_strrchr)
+--4316-- REDIR: 0x4eb7470 (malloc) redirected to 0x4c2a270 (malloc)
+==4316== Invalid read of size 8
+==4316==    at 0x40094A: createCharTree (utility.c:84)
+==4316==    by 0x400D90: main (pa09.c:25)
+==4316==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==4316== 
+==4316== 
+==4316== Process terminating with default action of signal 11 (SIGSEGV)
+==4316==  Access not within mapped region at address 0x0
+==4316==    at 0x40094A: createCharTree (utility.c:84)
+==4316==    by 0x400D90: main (pa09.c:25)
+==4316==  If you believe this happened as a result of a stack
+==4316==  overflow in your program's main thread (unlikely but
+==4316==  possible), you can try to increase the size of the
+==4316==  main thread stack using the --main-stacksize= flag.
+==4316==  The main thread stack size used in this run was 8388608.
+--4316-- REDIR: 0x4eb7900 (free) redirected to 0x4c2b5a0 (free)
+==4316== 
+==4316== HEAP SUMMARY:
+==4316==     in use at exit: 568 bytes in 1 blocks
+==4316==   total heap usage: 1 allocs, 0 frees, 568 bytes allocated
+==4316== 
+==4316== Searching for pointers to 1 not-freed blocks
+==4316== Checked 82,856 bytes
+==4316== 
+==4316== LEAK SUMMARY:
+==4316==    definitely lost: 0 bytes in 0 blocks
+==4316==    indirectly lost: 0 bytes in 0 blocks
+==4316==      possibly lost: 0 bytes in 0 blocks
+==4316==    still reachable: 568 bytes in 1 blocks
+==4316==         suppressed: 0 bytes in 0 blocks
+==4316== Reachable blocks (those to which a pointer was found) are not shown.
+==4316== To see them, rerun with: --leak-check=full --show-reachable=yes
+==4316== 
+==4316== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 2 from 2)
+==4316== 
+==4316== 1 errors in context 1 of 1:
+==4316== Invalid read of size 8
+==4316==    at 0x40094A: createCharTree (utility.c:84)
+==4316==    by 0x400D90: main (pa09.c:25)
+==4316==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==4316== 
+--4316-- 
+--4316-- used_suppression:      2 dl-hack3-cond-1
+==4316== 
+==4316== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 2 from 2)

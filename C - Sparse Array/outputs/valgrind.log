@@ -1,0 +1,89 @@
+==4178== Memcheck, a memory error detector
+==4178== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==4178== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==4178== Command: ./pa08 inputs/input7 outputs/voutput
+==4178== Parent PID: 2399
+==4178== 
+--4178-- 
+--4178-- Valgrind options:
+--4178--    --suppressions=/usr/lib/valgrind/debian-libc6-dbg.supp
+--4178--    --tool=memcheck
+--4178--    --leak-check=full
+--4178--    --verbose
+--4178--    --log-file=outputs/valgrind.log
+--4178-- Contents of /proc/version:
+--4178--   Linux version 3.8.0-31-generic (buildd@panlong) (gcc version 4.7.3 (Ubuntu/Linaro 4.7.3-1ubuntu1) ) #46-Ubuntu SMP Tue Sep 10 20:03:44 UTC 2013
+--4178-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--4178-- Page sizes: currently 4096, max supported 4096
+--4178-- Valgrind library directory: /usr/lib/valgrind
+--4178-- Reading syms from /home/andy/Desktop/ECE264/solutions/hw/PA08/pa08
+--4178-- Reading syms from /lib/x86_64-linux-gnu/ld-2.17.so
+--4178--   Considering /lib/x86_64-linux-gnu/ld-2.17.so ..
+--4178--   .. CRC mismatch (computed 51e60a7a wanted 521e3c74)
+--4178--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--4178--   .. CRC is valid
+--4178--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.17.so ..
+--4178--   .. CRC is valid
+--4178-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--4178--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--4178--   .. CRC mismatch (computed c436d3d9 wanted 99aa3883)
+--4178--    object doesn't have a symbol table
+--4178--    object doesn't have a dynamic symbol table
+--4178-- Scheduler: using generic scheduler lock implementation.
+--4178-- Reading suppressions file: /usr/lib/valgrind/debian-libc6-dbg.supp
+--4178-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==4178== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-4178-by-andy-on-???
+==4178== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-4178-by-andy-on-???
+==4178== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-4178-by-andy-on-???
+==4178== 
+==4178== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==4178== don't want to do, unless you know exactly what you're doing,
+==4178== or are doing some strange experiment):
+==4178==   /usr/lib/valgrind/../../bin/vgdb --pid=4178 ...command...
+==4178== 
+==4178== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==4178==   /path/to/gdb ./pa08
+==4178== and then give GDB the following command
+==4178==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=4178
+==4178== --pid is optional if only one valgrind process is running
+==4178== 
+--4178-- REDIR: 0x4018f40 (strlen) redirected to 0x3806e491 (???)
+--4178-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--4178--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--4178--   .. CRC mismatch (computed 826470ab wanted a8b7e9f3)
+--4178--    object doesn't have a symbol table
+--4178-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--4178--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--4178--   .. CRC mismatch (computed d4fd7975 wanted b90a895a)
+--4178--    object doesn't have a symbol table
+--4178-- REDIR: 0x4018db0 (index) redirected to 0x4c2d480 (index)
+--4178-- REDIR: 0x4018e30 (strcmp) redirected to 0x4c2e560 (strcmp)
+--4178-- Reading syms from /lib/x86_64-linux-gnu/libc-2.17.so
+--4178--   Considering /lib/x86_64-linux-gnu/libc-2.17.so ..
+--4178--   .. CRC mismatch (computed 2c8ee98b wanted da4a7364)
+--4178--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--4178--   .. CRC is valid
+--4178--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.17.so ..
+--4178--   .. CRC is valid
+--4178-- REDIR: 0x4ec1980 (strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4178-- REDIR: 0x4ebdd10 (strnlen) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4178-- REDIR: 0x4ec3c50 (strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4178-- REDIR: 0x4ec0790 (memset) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4178-- REDIR: 0x4ec0740 (memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--4178-- REDIR: 0x4ebf700 (__GI_strrchr) redirected to 0x4c2d2a0 (__GI_strrchr)
+--4178-- REDIR: 0x4eb7470 (malloc) redirected to 0x4c2a270 (malloc)
+--4178-- REDIR: 0x4ec7b20 (strchrnul) redirected to 0x4c300f0 (strchrnul)
+--4178-- REDIR: 0x4eb7900 (free) redirected to 0x4c2b5a0 (free)
+--4178-- REDIR: 0x4ebdc30 (__GI_strlen) redirected to 0x4c2d830 (__GI_strlen)
+==4178== 
+==4178== HEAP SUMMARY:
+==4178==     in use at exit: 0 bytes in 0 blocks
+==4178==   total heap usage: 12,185 allocs, 12,185 frees, 356,592 bytes allocated
+==4178== 
+==4178== All heap blocks were freed -- no leaks are possible
+==4178== 
+==4178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+--4178-- 
+--4178-- used_suppression:      2 dl-hack3-cond-1
+==4178== 
+==4178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
