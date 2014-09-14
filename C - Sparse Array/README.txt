@@ -1,5 +1,3 @@
-Assignment PA08: Sparse Array
-
 Consider a data structure called a sparse array: most elements of a
 sparse array are 0. This means that most elements do not need to be
 stored in the array. Only the elements whose values are non-zero are
