@@ -1,8 +1,3 @@
-------------------------------------------------------------------
-ECE 264 - FALL 2013 - PROGRAMMING ASSIGNMENT 09
-------------------------------------------------------------------
-(Derived from an assignment by Professor Vijay Raghunathan)
-
 INTRODUCTION
 ============
 You will base your utilities on the widely used algorithmic technique
